@@ -1,0 +1,46 @@
+{
+  "name": "strapi-provider-upload-oss",
+  "version": "0.0.1",
+  "description": "Aliyun OSS provider for strapi upload",
+  "homepage": "http://strapi.io",
+  "keywords": [
+    "upload",
+    "aliyun",
+    "oss",
+    "strapi"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib",
+  "dependencies": {
+    "ali-oss": "^6.0.1"
+  },
+  "strapi": {
+    "isProvider": true
+  },
+  "author": {
+    "email": "hezzze@gmail.com",
+    "name": "hezzze",
+    "url": "http://heze.io"
+  },
+  "maintainers": [
+    {
+      "name": "hezzze@gmail.com",
+      "email": "hezzze",
+      "url": "http://heze.io"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hezzze/strapi-provider-upload-oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hezzze/strapi-provider-upload-oss/issues"
+  },
+  "engines": {
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "license": "MIT"
+}
