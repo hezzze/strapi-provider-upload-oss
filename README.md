@@ -21,6 +21,7 @@ Field | value
 **Bucket** | bucket name
 **Upload Path** | path to store the file
 **Domain to access** | can be your custom oss domain for access
+**Automatically generate thumbnails** (Beta) |  **VIDEO FILES ONLY** currently only supports `.mp4` file, will generate thumbnail for the video uploaded (screenshot at `00:01` of the video, size: `480x360`)
 
 Example:
 
