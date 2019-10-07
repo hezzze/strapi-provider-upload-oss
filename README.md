@@ -20,7 +20,7 @@ Field | value
 **Region** | OSS region
 **Bucket** | bucket name
 **Upload Path** | path to store the file
-**Domain to access** | can be your custom oss domain for access
+**Base URL to access** | can be your custom oss url for accessing the uploaded file
 **timeout** | OSS upload timeout (unit: seconds)
 **Automatically generate thumbnails** (Beta) |  **VIDEO FILES ONLY** currently only supports `.mp4` file, will generate thumbnail for the video uploaded (screenshot at `00:01` of the video, size: `480x360`)
 
