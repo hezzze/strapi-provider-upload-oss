@@ -17,7 +17,7 @@ Field | value
 ----- | -----
 **AccessKeyId token** | &lt;aliyun access key id&gt;
 **AccessKeySecret token token** | &lt;aliyun access key secret&gt;
-**Region** | OSS region
+**Region** | OSS region https://help.aliyun.com/document_detail/31837.html#title-qvx-r3a-xr4
 **Bucket** | bucket name
 **Upload Path** | path to store the file
 **Base URL to access** | can be your custom oss url for accessing the uploaded file, e.g. //www.website.com
