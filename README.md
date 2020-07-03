@@ -68,5 +68,11 @@ Example:
 # OSS Region reference
 https://help.aliyun.com/document_detail/31837.html#title-qvx-r3a-xr4
 
+# Troubleshooting
+
+Q: getting "The bucket you are attempting to access must be addressed using the specified endpoint. Please send all future requests to this endpoint."
+
+A: Check if the OSS region is correct for the bucket you're using
+
 # Contribution
 This repo is maintained periodically, any contribution is highly welcomed
