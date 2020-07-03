@@ -29,7 +29,7 @@ To enable the provider, create or edit the file at ```./config/plugins.js```.
 ```javascript
 module.exports = ({ env }) => ({
   upload: {
-    provider: 'aliyun-oss',
+    provider: 'oss',
     providerOptions: {
       accessKeyId: env('ACCESS_KEY_ID'),
       accessKeySecret: env('ACCESS_KEY_SECRET'),
