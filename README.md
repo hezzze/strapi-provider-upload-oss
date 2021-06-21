@@ -16,13 +16,13 @@ or
 $ yarn add strapi-provider-upload-oss --save
 ```
 
-For more details, please see: https://strapi.io/documentation/v3.x/plugins/upload.html#using-a-provider
+For more details, please see: https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html#using-a-provider
 
 # Usage
 
 ### Strapi version > 3.0.0
 
-With a stable release of Strapi 3.0.0, the configuration was moved to a JavaScript file. Official documentation [here](https://strapi.io/documentation/v3.x/plugins/upload.html#using-a-provider).
+With a stable release of Strapi 3.0.0, the configuration was moved to a JavaScript file. Official documentation [here](https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html#using-a-provider).
 
 To enable the provider, create or edit the file at ```./config/plugins.js```.
 
