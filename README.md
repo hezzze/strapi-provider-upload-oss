@@ -37,7 +37,8 @@ module.exports = ({ env }) => ({
       bucket: env('BUCKET'),
       uploadPath: env('UPLOAD_PATH'),
       baseUrl: env('BASE_URL'),
-      timeout: env('TIMEOUT')
+      timeout: env('TIMEOUT'),
+      secure: env('OSS_SECURE') //default to true
     }
   }
 });
