@@ -1,5 +1,5 @@
 # strapi-provider-upload-oss
-A provider for strapi server to upload file to Aliyun OSS
+A provider for strapi server to upload file to Aliyun OSS.
 
 # Requirements
 - Node.js >= 10
@@ -20,9 +20,36 @@ For more details, please see: https://strapi.io/documentation/developer-docs/lat
 
 # Usage
 
-### Strapi version > 3.0.0
 
-With a stable release of Strapi 3.0.0, the configuration was moved to a JavaScript file. Official documentation [here](https://strapi.io/documentation/developer-docs/latest/development/plugins/upload.html#using-a-provider).
+### Strapi v4
+
+The lastest version of the provider supports v4 by default, configuration is updated a little bit. See example below for ```./config/plugins.js```:
+
+```javascript
+module.exports = ({ env }) => ({
+  upload: {
+    config: {
+      provider: 'strapi-provider-upload-oss', // full package name is required
+      providerOptions: {
+        accessKeyId: env('ACCESS_KEY_ID'),
+        accessKeySecret: env('ACCESS_KEY_SECRET'),
+        region: env('REGION'),
+        bucket: env('BUCKET'),
+        uploadPath: env('UPLOAD_PATH'),
+        baseUrl: env('BASE_URL'),
+        timeout: env('TIMEOUT'),
+        secure: env('OSS_SECURE')
+      }
+    }
+  }
+});
+```
+
+Official documentation [here](https://docs.strapi.io/developer-docs/latest/plugins/upload.html#enabling-the-provider)
+
+### Strapi v3
+
+With a stable release of Strapi 3.0.0, the configuration was moved to a JavaScript file. Official documentation [here](https://docs-v3.strapi.io/developer-docs/latest/development/plugins/upload.html#enabling-the-provider).
 
 To enable the provider, create or edit the file at ```./config/plugins.js```.
 
@@ -44,26 +71,19 @@ module.exports = ({ env }) => ({
 });
 ```
 
-See below table for description of each provider option.
+### Provider Options
 
-### Strapi Beta or alpha
-
-The description for each fields to fill in strapi's configuration UI are as follows:
-
-Field | value
------ | -----
-**AccessKeyId token** | &lt;aliyun access key id&gt;
-**AccessKeySecret token token** | &lt;aliyun access key secret&gt;
-**Region** | OSS region (see reference below)
-**Bucket** | bucket name
-**Upload Path** | path to store the file
-**Base URL to access** | can be your custom oss url for accessing the uploaded file, e.g. //www.website.com
-**timeout** | OSS upload timeout (unit: seconds)
-**Automatically generate thumbnails** (Beta) |  **VIDEO FILES ONLY** currently only supports `.mp4` file, will generate thumbnail for the video uploaded (screenshot at `00:01` of the video, size: `480x360`)
-
-Example:
-
-<img src="https://user-images.githubusercontent.com/2413682/63400602-fc1b3480-c406-11e9-91c6-db11c7c2ba67.png" width="500" />
+Property | type |  value
+----- | ---- | ------------
+**accessKeyId** | string | &lt;aliyun access key id&gt;
+**accessKeySecret** | string | &lt;aliyun access key secret&gt;
+**region** | string | OSS region (see reference below)
+**bucket** | string | bucket name
+**uploadPath** | string | path to store the file
+**baseUrl** | string | can be your custom oss url for accessing the uploaded file, e.g. //www.website.com
+**timeout** | integer | OSS upload timeout (unit: seconds)
+**secure** | boolean | will https mode be enabled for oss client
+**autoThumb** (Beta) | boolean |  **VIDEO FILES ONLY** currently only supports `.mp4` file, will generate thumbnail for the video uploaded (screenshot at `00:01` of the video, size: `480x360`)
 
 
 # OSS Region reference
