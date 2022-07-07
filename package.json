@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-oss",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Aliyun OSS provider for strapi upload",
   "homepage": "http://strapi.io",
   "keywords": [
