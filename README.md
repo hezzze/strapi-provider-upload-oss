@@ -38,7 +38,8 @@ module.exports = ({ env }) => ({
         uploadPath: env('UPLOAD_PATH'),
         baseUrl: env('BASE_URL'),
         timeout: env('TIMEOUT'),
-        secure: env('OSS_SECURE')
+        secure: env('OSS_SECURE'),
+        internal: env.bool('OSS_INTERNAL', false),
       }
     }
   }
@@ -65,7 +66,8 @@ module.exports = ({ env }) => ({
       uploadPath: env('UPLOAD_PATH'),
       baseUrl: env('BASE_URL'),
       timeout: env('TIMEOUT'),
-      secure: env('OSS_SECURE') //default to true
+      secure: env('OSS_SECURE'), //default to true
+      internal: env.bool('OSS_INTERNAL', false),
     }
   }
 });
@@ -84,6 +86,7 @@ Property | type |  value
 **timeout** | integer | OSS upload timeout (unit: seconds)
 **secure** | boolean | will https mode be enabled for oss client
 **autoThumb** (Beta) | boolean |  **VIDEO FILES ONLY** currently only supports `.mp4` file, will generate thumbnail for the video uploaded (screenshot at `00:01` of the video, size: `480x360`)
+**internal** | boolean | access OSS with aliyun internal network or not, default is false. If your servers are running on aliyun too, you can set true to save lot of money.
 
 
 # OSS Region reference
