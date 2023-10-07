@@ -85,7 +85,6 @@ Property | type |  value
 **baseUrl** | string | can be your custom oss url for accessing the uploaded file, e.g. //www.website.com
 **timeout** | integer | OSS upload timeout (unit: seconds)
 **secure** | boolean | will https mode be enabled for oss client
-**autoThumb** (Beta) | boolean |  **VIDEO FILES ONLY** currently only supports `.mp4` file, will generate thumbnail for the video uploaded (screenshot at `00:01` of the video, size: `480x360`)
 **internal** | boolean | access OSS with aliyun internal network or not, default is false. If your servers are running on aliyun too, you can set true to save lot of money.
 
 
